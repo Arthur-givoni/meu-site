@@ -1,0 +1,144 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #1e1e1e;
+}
+
+/* Tema claro */
+.light-theme{
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --cardBg: rgba(0,0,0,0.05);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/* Tema escuro */
+.dark-theme{
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --cardBg: rgba(255,255,255,0.08);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* GLOBAL */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body{
+    background: var(--bg);
+    color: var(--fontColor);
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    text-align: center;
+    padding: 20px;
+}
+
+/* CONTAINER */
+section{
+    background: var(--cardBg);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* LISTA */
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--cardBg);
+    cursor: pointer;
+
+    animation: slideUp 0.3s ease;
+    transition: transform 0.2s, background 0.3s;
+}
+
+/* HOVER */
+li:hover{
+    transform: scale(1.05);
+}
+
+/* BOTÃO TEMA */
+.btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+
+    font-size: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+/* HOVER */
+.btn:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* CLICK */
+.btn:active {
+    transform: scale(0.9);
+}
+
+/* IMAGEM */
+img{
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* Fade corrigido */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lista subindo */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
