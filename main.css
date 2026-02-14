@@ -1,0 +1,179 @@
+:root{
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Tema claro */
+.light-theme{
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+/* Tema escuro */
+.dark-theme{
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* Global */
+*{
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body{
+    background: var(--bg);
+}
+
+/* Layout */
+header{
+    text-align: center;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+section{
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* Lista */
+li{
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.1);
+
+    animation: slideUp 0.3s ease;
+}
+
+/* Botão tema */
+.btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+
+    font-size: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+/* Hover botão tema */
+.btn:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Clique botão */
+.btn:active {
+    transform: scale(0.9);
+}
+
+/* Área input */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Input */
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+
+    border: 1px solid var(--fontColor);
+
+    background-color: transparent;
+    color: var(--fontColor);
+
+    transition: 0.3s;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: var(--fontColor);
+    opacity: 0.6;
+}
+
+/* Foco */
+input:focus {
+    outline: none;
+    border: 2px solid var(--btnBg);
+    transform: scale(1.02);
+}
+
+/* Botão adicionar */
+#addBtn {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--btnBg);
+    color: var(--btnFontColor);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Hover botão */
+#addBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--btnBg);
+}
+
+/* Clique botão */
+#addBtn:active {
+    transform: scale(0.95);
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* Fade geral */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Itens da lista */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
