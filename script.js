@@ -123,7 +123,7 @@ if (typingText) {
   const words = [
     "Monitoramento de redes",
     "Suporte técnico",
-    "Troubleshooting",
+    "Desenvolvimento Front-End",
     "Infraestrutura",
     "Desenvolvimento web"
   ];
@@ -156,4 +156,5 @@ if (typingText) {
   }
 
   typeEffect();
+
 }
